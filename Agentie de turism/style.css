@@ -1,0 +1,378 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+nav {
+    background-color: #1e90ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav img {
+    position: absolute;
+    left: 20px;
+    height: 85px;
+}
+
+.linkuri-navigatie {
+    display: flex;
+    gap: 30px;
+}
+
+.linkuri-navigatie a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.linkuri-navigatie a:hover {
+    color: #ffcc00;
+}
+
+.sectiune-principala {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    padding: 0 20px;
+    margin-top: 70px;
+    background: url('img/mare.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+.sectiune-principala h1 {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.sectiune-principala p {
+    font-size: 22px;
+    max-width: 800px;
+}
+
+
+.sectiune-despre {
+    background-color: #ffffff;
+    color: #333;
+    padding: 100px 20px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.sectiune-despre .container {
+    max-width: 900px;
+    width: 100%;
+}
+
+.sectiune-despre h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    color: #1e90ff;
+}
+
+.sectiune-despre h2 {
+    margin-top: 40px;
+    font-size: 30px;
+    color: #ffcc00;
+}
+
+.sectiune-despre p {
+    margin-top: 15px;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.lista-valori {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.lista-valori li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+
+.echipa {
+    background: #f2f8fc;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.carduri-echipa {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 5px;
+    color: #006699;
+}
+
+.card p {
+    color: #555;
+}
+
+
+.sectiune-destinatii {
+    padding: 100px 20px;
+    background: white;
+    text-align: center;
+}
+
+.sectiune-destinatii h1 {
+    font-size: 48px;
+    margin-bottom: 40px;
+    color: #1e90ff;
+}
+
+.grid-destinatii {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card-destinatie {
+    background: #fff;
+    border-radius: 12px;
+    padding-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-destinatie img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-destinatie h2 {
+    margin-top: 15px;
+    font-size: 22px;
+    color: #1e90ff;
+    font-weight: bold;
+}
+
+.card-destinatie:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+
+.sectiune-oferte {
+    padding: 100px 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.sectiune-oferte h1 {
+    font-size: 48px;
+    color: #1e90ff;
+    margin-bottom: 10px;
+}
+
+.text-intro {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.lista-oferte {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    padding: 0 20px;
+}
+
+.oferta-card {
+    background: #f8faff;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    padding-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.oferta-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.oferta-card h2 {
+    margin-top: 15px;
+    font-size: 24px;
+    color: #1e90ff;
+}
+
+.pret-vechi {
+    text-decoration: line-through;
+    color: #999;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.pret-redus {
+    color: #ff6600;
+    font-size: 26px;
+    font-weight: bold;
+    margin: 5px 0 15px;
+}
+
+.oferta-card button {
+    background: #1e90ff;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.oferta-card button:hover {
+    background: #ffcc00;
+    color: #333;
+}
+
+.oferta-card:hover {
+    transform: scale(1.04);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+
+.sectiune-contacte {
+    background-color: #f0f8ff;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.sectiune-contacte h1 {
+    font-size: 48px;
+    color: #1e90ff;
+    margin-bottom: 10px;
+}
+
+.sectiune-contacte p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.contact-info div h2 {
+    color: #1e90ff;
+    margin-bottom: 5px;
+}
+
+.contact-info div p {
+    font-size: 16px;
+    color: #555;
+}
+
+.formular-contact {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formular-contact input,
+.formular-contact textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.formular-contact button {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.formular-contact button:hover {
+    background-color: #ffcc00;
+    color: #333;
+}
+
+
+footer {
+    background-color: #1e90ff;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+}
+
+footer .social a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+footer .social a:hover {
+    color: #ffcc00;
+}
