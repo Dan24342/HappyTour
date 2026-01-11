@@ -1,0 +1,474 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* VARIABILE CULORI */
+:root {
+    --albastru-principal: #1e90ff;
+    --galben-accent: #ffcc00;
+    --portocaliu: #ff6600;
+    --text-gri: #555;
+    --fundal-alb: #ffffff;
+    --fundal-galben: #f8faff;
+    --fundal-contact: #f0f8ff;
+}
+
+/* NAVBAR */
+nav {
+    background-color: var(--albastru-principal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    font-size: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+nav:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+nav img {
+    position: absolute;
+    left: 20px;
+    height: 85px;
+}
+
+.linkuri-navigatie {
+    display: flex;
+    gap: 30px;
+}
+
+.linkuri-navigatie a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.linkuri-navigatie a:hover {
+    color: var(--galben-accent);
+    transform: scale(1.1);
+}
+
+/* SECTIUNE PRINCIPALA */
+.sectiune-principala {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    margin-top: 70px;
+    background: url('img/mare.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+}
+
+.sectiune-principala h1 {
+    font-size: 60px;
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeSlideUp 1s forwards 0.3s;
+}
+
+.sectiune-principala p {
+    font-size: 22px;
+    max-width: 800px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeSlideUp 1s forwards 0.6s;
+}
+
+/* ANIMATIE */
+@keyframes fadeSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* SECTIUNE DESPRE */
+.sectiune-despre {
+    background-color: var(--fundal-alb);
+    color: #333;
+    padding: 100px 20px 60px;
+    text-align: center;
+}
+
+.sectiune-despre .container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.sectiune-despre h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    color: var(--albastru-principal);
+}
+
+.sectiune-despre h2 {
+    margin-top: 40px;
+    font-size: 30px;
+    color: var(--galben-accent);
+}
+
+.sectiune-despre p {
+    margin-top: 15px;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.lista-valori {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.lista-valori li {
+    margin: 10px 0;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+/* SECTIUNE DESTINATII */
+.sectiune-destinatii {
+    padding: 100px 20px;
+    background: var(--fundal-alb);
+    text-align: center;
+}
+
+.sectiune-destinatii h1 {
+    font-size: 48px;
+    margin-bottom: 40px;
+    color: var(--albastru-principal);
+}
+
+.grid-destinatii {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card-destinatie {
+    background: var(--fundal-alb);
+    border-radius: 12px;
+    padding-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-destinatie img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-destinatie h2 {
+    margin-top: 15px;
+    font-size: 22px;
+    color: var(--albastru-principal);
+}
+
+.card-destinatie:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* SECTIUNE OFERTE */
+.sectiune-oferte {
+    padding: 100px 20px;
+    background: var(--fundal-alb);
+    text-align: center;
+}
+
+.sectiune-oferte h1 {
+    font-size: 48px;
+    color: var(--albastru-principal);
+    margin-bottom: 10px;
+}
+
+.text-intro {
+    color: var(--text-gri);
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.lista-oferte {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    padding: 0 20px;
+}
+
+.oferta-card {
+    background: var(--fundal-galben);
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    overflow: hidden;
+    padding-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.oferta-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.oferta-card h2 {
+    margin-top: 15px;
+    font-size: 24px;
+    color: var(--albastru-principal);
+}
+
+.pret-vechi {
+    text-decoration: line-through;
+    color: #999;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.pret-redus {
+    color: var(--portocaliu);
+    font-size: 26px;
+    font-weight: bold;
+    margin: 5px 0 15px;
+}
+
+.oferta-card button {
+    background: var(--albastru-principal);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.oferta-card button:hover {
+    background: var(--galben-accent);
+    color: #333;
+}
+
+.oferta-card:hover {
+    transform: scale(1.04);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* SECTIUNE CONTACTE */
+.sectiune-contacte {
+    background-color: var(--fundal-contact);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.sectiune-contacte h1 {
+    font-size: 48px;
+    color: var(--albastru-principal);
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.contact-info div h2 {
+    color: var(--albastru-principal);
+    margin-bottom: 5px;
+}
+
+.contact-info div p {
+    font-size: 16px;
+    color: var(--text-gri);
+}
+
+.formular-contact {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formular-contact input,
+.formular-contact textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.formular-contact button {
+    background-color: var(--albastru-principal);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.formular-contact button:hover {
+    background-color: var(--galben-accent);
+    color: #333;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--albastru-principal);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+}
+
+footer .social a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+footer .social a:hover {
+    color: var(--galben-accent);
+}
+
+/* HERO GALERIE */
+.hero-galerie {
+    position: relative;
+    height: 400px;
+    background: url('img/hero-galerie.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    text-align: center;
+    color: white;
+}
+
+.hero-galerie .overlay {
+    background-color: rgba(0, 0, 0, 0.45);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-galerie h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero-galerie p {
+    font-size: 20px;
+}
+
+/* GALERIE */
+.sectiune-galerie {
+    padding: 80px 20px 60px;
+    background: #f5faff;
+    text-align: center;
+}
+
+.sectiune-galerie .titlu-sec {
+    font-size: 42px;
+    color: var(--albastru-principal);
+    font-weight: bold;
+    margin: 40px 0 20px;
+}
+
+.grid-galerie {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.foto-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.foto-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.foto-card:hover img {
+    transform: scale(1.12);
+    filter: brightness(75%);
+}
+
+.info-card {
+    padding: 20px;
+    text-align: left;
+}
+
+.info-card h3 {
+    color: var(--albastru-principal);
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.info-card p {
+    font-size: 16px;
+    color: var(--text-gri);
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.info-card button {
+    background-color: var(--albastru-principal);
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.info-card button:hover {
+    background-color: var(--galben-accent);
+    color: #333;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+    .hero-galerie h1 { font-size: 36px; }
+    .hero-galerie p { font-size: 18px; }
+    .grid-galerie { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .foto-card img { height: 220px; }
+}
